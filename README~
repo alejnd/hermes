@@ -16,7 +16,7 @@ be used for connect to standard XMPP services.
     Usage
     -----
 
-First of all, you need to insatll tweepy and flask python libraries,
+First of all, go to tweepy directory and install the python library,
 fill hermes.cfg with your account information and lanuch it with
 python server.py
 
