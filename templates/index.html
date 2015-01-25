@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>Lasts messages</h2>
+<div class="md-6">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Loglevel</th>
+                <th>Service</th>
+                <th>Message</th>
+                <th>Destination</th>
+                <th>Subject</th>
+                <th>Delivered</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for list in result %}
+              <tr>
+                {% for item in list %}
+                <td>{% if item ==1 %}  <span class="label label-success">Success</span>
+                    {% elif item == 0%} <span class="label label-danger">Failed</span>
+                    {% else %}{{item}}{% endif %}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+{% endblock %}

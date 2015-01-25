@@ -1,0 +1,49 @@
+
+            Hermes: rest message proxy
+	    
+
+    What is it?
+    -----------
+    
+Hermes is a simple personal project to make a REST service to allow
+to other applications send notifications via email, and get tracked 
+in a database.
+
+Originally supported gtalk using XMPP but google no longer supports
+this protocol and now its a legacy feature. May be this feature can
+be used for connect to standard XMPP services.  
+
+    Usage
+    -----
+
+First of all, go to tweepy directory and install the python library,
+fill hermes.cfg with your account information and lanuch it with
+python server.py
+
+Now you can send messages using python or commanline.
+
+Test example:
+curl -H "Content-Type: application/json" -d '{"msg":"hi from curl","log_level":"DEBUG"}' http://localhost:5000/twitter/notify
+
+You can also see: posttest.py. Its provides and example about how to
+post a message using standard python libraries.
+
+
+   Licensing
+   ---------
+Copyright (C) <2014>  <Alejandro Murciano Renedo>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+contact: alemail@gmail.com
